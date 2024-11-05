@@ -100,9 +100,6 @@ main{
     line-height: 70px;
     letter-spacing: -0.02em;
     text-align: left;
-    
-  
-  
   }
 
 
@@ -301,8 +298,16 @@ main{
     text-align: left;
   
   }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: rgb(151, 46, 116);
+    color: white;
+    margin-top: 20px;
+}
   
- 
+
   
   
   
