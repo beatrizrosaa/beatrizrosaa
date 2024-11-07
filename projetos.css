@@ -83,8 +83,11 @@ main{
 .inicioprojetos{
   height: 100%;
   max-width: 100%;
-
+  color: rgb(151, 46, 116);
+  
 }
+
+
 
 
 .galeriaprojetos{
@@ -95,6 +98,11 @@ main{
   max-width: 100%;
 }
 
+.galeriaprojetos img{
+  width: 15rem;
+}
+
+
 .textosprojetos{
     display: flex;
     flex-direction: row;
@@ -102,7 +110,17 @@ main{
     max-width: 100%;
     gap:2rem;
     margin-bottom: 30%;
-}  
+    word-break: break-word; 
+} 
+
+.textosprojetos1{
+  word-break: break-word; 
+  width:50%;
+}
+
+/* p{
+  word-break: break-word; 
+}
 
 .b1, .b2, .b3 { 
   word-break: break-word; 
@@ -111,7 +129,7 @@ main{
 
   word-break: break-word; 
   
-}
+} */
 
 footer {
   text-align: center;
