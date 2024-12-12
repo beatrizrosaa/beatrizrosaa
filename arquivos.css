@@ -129,14 +129,12 @@ header{
       display: flex;
       flex-direction: row;
       
-      
-      
     }
 
     .divprojeto3 p{
       width:90%;
       margin-bottom: 2rem;
-     
+    
     }
 
 
@@ -150,6 +148,12 @@ header{
       width: 370px; /* Define a largura desejada */
       height: auto; /* Mantém a proporção da imagem */
       margin-bottom: 20px; /* Espaçamento entre as imagens */
+    }
+
+    .video{
+      width: auto;
+      height: 185px;
+      border-radius: 10px;
     }
 
     

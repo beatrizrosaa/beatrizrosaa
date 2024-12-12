@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Sahitya:wght@400;700&display=swap');
+
+body {
+       
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+    width:100%; 
+    font-family: "Sahitya", serif;
+    background-color: rgb(237, 226, 229);
+  }
+
+  /* HEADER */
+
+header{ 
+    gap:10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;  
+    flex-direction: row;
+    box-shadow: 0 10px 15px -5px rgba(173, 139, 139, 0.3);
+    font-weight: bold;
+}
+
+  
+ ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 2rem;
+  }
+
+  
+ li {
+    margin-right: 15px;
+  }
+  
+  ul li a {
+    text-decoration: none;
+    color: #474444;
+    font-size: 12px;
+  }
+
+
+  img{
+    border-radius: 7px 7px 7px 7px;
+    width: 25px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;   
+  }
+
+
+  li a:hover img {
+    transform: scale(1.2); 
+  }
+
+  
+  .cabeçalho2{
+    margin-left: 10rem;
+  }
+
+
+ 
+/* MAIN */
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bloco{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.bloco:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.bloco img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.bloco .text {
+    flex: 1;
+    text-align: justify;
+}

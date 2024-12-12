@@ -75,12 +75,74 @@ header{
     
     
   }
+
+  h3{
+    margin-left: 2rem;
+  }
   
   .inicioprojetos{
     height: 100%;
     max-width: 100%;
     color: rgb(151, 46, 116);
     
+  }
+
+  .galeriaprojetos{
+    display:flex;
+    flex-direction: row;  
+    gap: 2rem;  
+    height: 100%;
+    max-width: 100%;
+  }
+  
+  
+
+  .v{
+    width: 155px;
+    height: 240px;
+  }
+
+  .h{
+    width: 336px;
+    height: 240px;
+  }
+
+  .projeto {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    justify-content: center;
+    width: 100%; 
+    background: rgb(224, 199, 218);
+    border-radius: 10px;
+    padding: 20px; 
+}
+
+
+  .divprojeto3 {
+    display: flex;
+    flex-direction: row;
+    
+  }
+
+  .divprojeto3 p{
+    width:90%;
+    margin-bottom: 2rem;
+    margin: 2rem;
+  
+  }
+  
+  
+  #img {
+    width: 56%;
+    height: 380px;
+    margin-bottom: 20px; 
+  }
+
+  #img3{
+    width:300px;
+    height: 200px;
+    margin-left: 50px;
   }
 
   /* FOOTER */
