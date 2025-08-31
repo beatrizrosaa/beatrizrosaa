@@ -27,7 +27,7 @@
 
 ## 📫 Como me encontrar
 - 💼 [LinkedIn](https://linkedin.com/in/beatrizrosaa)  
-- 💻 [Portfólio](https://seu-site.com)  
+- 💻 [Portfólio]
 - 📧 Email: rosabeatriz438@yahoo.com.br  
 
 ---
