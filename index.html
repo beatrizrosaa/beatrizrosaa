@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WHO AM I?</title>
+    <title>Beatriz Rosa | Engenharia da Computação</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sahitya:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="melhorias.css" />
+    <script src="animacoes.js" defer></script>
 </head>
 <body>
     <header>
@@ -15,7 +17,8 @@
         <div class="cabeçalho">
           <nav class="sections">
             <ul>
-              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html" aria-current="page">Home</a></li>
+              <li><a href="bioinformatica.html">Bioinformática</a></li>
               <li><a href="projetos.html">Projetos</a></li>
               <li><a href="arquivos.html">Arquivos</a></li>
             </ul>
@@ -25,13 +28,13 @@
           <nav class="socialmedia">
             <ul>
               <li>
-                <a href="https://github.com/beatrizrosaa" target="_blank">
+                <a href="https://github.com/beatrizrosaa" target="_blank" rel="noopener noreferrer">
                   <img src="github.png" alt="GitHub" />
                 </a>
               </li>
               <li>
-                <a href="www.linkedin.com/in/beatriz-rosa-almeida" target="_blank">
-                  <img src="linkedin.png" alt="Linkedin" />
+                <a href="https://www.linkedin.com/in/beatriz-rosa-almeida" target="_blank" rel="noopener noreferrer">
+                  <img src="linkedin.png" alt="LinkedIn" />
                 </a>
               </li>
               <li>
@@ -48,10 +51,10 @@
         
         <div class="section1">
           <div class="board">
-            <img id="minhaimagem" src="perfil.jpg" alt="minhaimagem" />
+            <img id="minhaimagem" src="perfil.jpg" alt="Foto de Beatriz Rosa" />
             <div class="dados">
             <h2> Beatriz Rosa de Almeida</h2>
-            <p class="dadosp">Engenahria da Computação - Senai Cimatec</p>
+            <p class="dadosp">Engenharia da Computação - Senai Cimatec</p>
             <p class="dadosp">Ciência da Computação - Universidade Federal da Bahia</p>
             <p class="dadosp">E-mail: rosabeatriz438@yahoo.com.br</p>
             <p class="dadosp">Contato: (71) 98898-8992</p>
@@ -63,14 +66,14 @@
             <h1> Explore à vontade e conheça minha trajetória.</h1>
           </div>
           <div class="divisao">______________________________________ </div>
-          <p>Me chamo Beatriz Rosa e atualmente estou cursando Engenharia da Computação no Senai Cimates e Ciência da Computação na UFBA – Este é um site desenvolvido por mim afim de compartilhar através dessa metalinguagem tudo que já aprendi</p>
-          <p>Meu curso me instiga a cada dia que passa, me vi imersa nas questôes de sustentabilidade <span className="highlight"></span>, e muito curiosa em como associar à tecnologia –  <span className="highlight"></span></p>
-          <p> Atualmente faço parte da Info Jr, empresa de juniores da UFBA, onde atuo no setor de Gestão de Pessoas e estou desenvolvendo minhas habilidade no Núcleo de Web. <span className="highlight"></span> Nesse processo, desenvolvi habilidades com algumas ferramentas e frameworks: Node JS, Next.JS , HTLM, CSS, Typescript, Insomnia, Beeckeper, React, SQlite, Prisma, Prismic <span className="highlight"></span> Além das linguagens que desenvolvi no meio acadêmico: Java, C, C++ e Python. <span className="highlight"></span>.<span className="highlight"></span></p>
+          <p>Me chamo Beatriz Rosa e atualmente estou cursando Engenharia da Computação no Senai Cimatec e Ciência da Computação na UFBA – Este é um site desenvolvido por mim a fim de compartilhar através dessa metalinguagem tudo que já aprendi</p>
+          <p>Meu curso me instiga a cada dia que passa, me vi imersa nas questões de sustentabilidade , e muito curiosa em como associar à tecnologia –  </p>
+          <p> Atualmente faço parte da Info Jr, empresa de juniores da UFBA, onde atuo no setor de Gestão de Pessoas e estou desenvolvendo minhas habilidade no Núcleo de Web.  Nesse processo, desenvolvi habilidades com algumas ferramentas e frameworks: Node JS, Next.JS , HTML, CSS, Typescript, Insomnia, Beekeeper, React, SQlite, Prisma, Prismic  Além das linguagens que desenvolvi no meio acadêmico: Java, C, C++ e Python. .</p>
           <p>Extrapolando minha vida universitária, sou uma entusiasta das artes e dos esportes. Participo anualmente de eventos de dança para promover a cultura em Salvador, fortalecendo minha conexão com a comunidade. Tive a oportunidade de liderar projetos sociais na minha antiga escola, onde adquiri habilidades de comunicação com pais e alunos, coordenação de grupos e gestão colaborativa com colegas. Entre as ações mais marcantes, organizamos uma grande doação de alimentos e itens de higiene, promovemos um dia de atendimento médico em um lar de idosos, e visitamos uma creche, onde proporcionamos um dia de brincadeiras e realizamos a reforma da quadra para as crianças. Essas experiências ampliaram minha visão sobre o impacto social e me permitiram contribuir diretamente para o bem-estar da comunidade. </p>
           <div class="callout">
             <div class="check"><img src="link.png" alt="Check" /></div>
             <div class="texto2"> 
-              <a  class="linksite" href="https://beatrizrosaa.github.io/beatrizrosaa/" target="_blank"> Link do site: <span className="highlight">https://beatrizrosaa.github.io/beatrizrosaa/</span> 
+              <a  class="linksite" href="https://beatrizrosaa.github.io/beatrizrosaa/" target="_blank" rel="noopener noreferrer"> Link do site: <span class="highlight">https://beatrizrosaa.github.io/beatrizrosaa/</span> 
               </a>
             </div>
           </div>
@@ -98,18 +101,13 @@
                 A INFO JR é a empresa júnior do curso de Ciência da Computação da Universidade Federal da Bahia (UFBA). Trata-se de uma organização sem fins lucrativos, gerida por estudantes universitários, que oferece serviços de tecnologia e consultoria em áreas como desenvolvimento web, design de interfaces, marketing digital e soluções de TI.</p>
               <!-- <button class="botao2"><a href="infojr.html"> Ficou curioso, chega mais! </a></button> -->
             </div>
-            <img id="imagem2" src="infojr.jpg"  />
+            <img id="imagem2" src="infojr.jpg" alt="Logo da Info Jr" />
 
           </div>
         </div>
       </main> 
       <footer>
-        <p>&copy; 2024 Beatriz Rosa | Todos os direitos reservados.</p>
+        <p>&copy; 2026 Beatriz Rosa | Todos os direitos reservados.</p>
     </footer>
 </body>
     </html>
-
-
-
-
-

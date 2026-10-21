@@ -1,0 +1,195 @@
+/* ==========================================================
+   melhorias.css
+   Camada de refinamento carregada DEPOIS do CSS de cada página.
+   Não altera a estrutura: só transições, hovers, entrada suave,
+   foco de teclado e responsividade.
+   ========================================================== */
+
+:root {
+  --cor-destaque: rgb(151, 46, 116);
+  --cor-destaque-suave: rgba(151, 46, 116, 0.35);
+  --fundo: rgb(237, 226, 229);
+  --texto: #474444;
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+html { scroll-behavior: smooth; }
+
+/* ---------- Leitura ---------- */
+main p { font-size: 14px; line-height: 1.7; text-align: left; }
+.texto3 { font-size: 14px; }
+.bloco .text { text-align: left; }
+
+/* ---------- Foco de teclado ---------- */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--cor-destaque);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* ---------- Cabeçalho ---------- */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--fundo);
+}
+
+/* Menu principal: sublinhado que se desenha da esquerda para a direita */
+.sections ul li a {
+  position: relative;
+  padding: 4px 0;
+  transition: color 0.25s var(--ease);
+}
+.sections ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--cor-destaque);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease);
+}
+.sections ul li a:hover,
+.sections ul li a[aria-current="page"] { color: var(--cor-destaque); }
+.sections ul li a:hover::after,
+.sections ul li a[aria-current="page"]::after { transform: scaleX(1); }
+
+/* Ícones de redes */
+.socialmedia li a:hover img { transform: translateY(-2px) scale(1.12); }
+
+/* ---------- Links de texto ---------- */
+.linkartigo,
+.linksite {
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0 1px;
+  transition: background-size 0.3s var(--ease);
+}
+.linkartigo:hover,
+.linksite:hover { background-size: 100% 1px; }
+
+/* ---------- Botão "Venha ver mais" ---------- */
+.botao2 {
+  cursor: pointer;
+  transition: background-color 0.3s var(--ease), transform 0.3s var(--ease);
+}
+.botao2 a { transition: color 0.3s var(--ease); }
+.botao2:hover { transform: translateY(-2px); }
+.botao2:hover a { color: whitesmoke; }
+
+/* ---------- Cartões: borda que ganha cor, sem "pular" ---------- */
+.projeto,
+.callout {
+  border: 1px solid transparent;
+  transition: border-color 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.projeto:hover,
+.callout:hover {
+  border-color: var(--cor-destaque-suave);
+  box-shadow: 0 14px 30px -18px var(--cor-destaque-suave);
+}
+
+/* ---------- Imagens de conteúdo ---------- */
+.bloco1 img, .bloco2 img, .bloco img,
+.galeriaprojetos img, .projeto img {
+  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+}
+.bloco1 img:hover, .bloco2 img:hover, .bloco img:hover,
+.galeriaprojetos img:hover, .projeto img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 26px -14px rgba(71, 68, 68, 0.55);
+}
+
+/* Foto de perfil: anel fino ao passar o mouse */
+#minhaimagem {
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+#minhaimagem:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 0 4px var(--fundo), 0 0 0 5px var(--cor-destaque);
+}
+
+/* ---------- Divisores feitos de "____" não podem estourar a tela ---------- */
+.divisao,
+.divisao2 { overflow: hidden; white-space: nowrap; }
+
+/* Rodapé e espaços que dependiam de % enormes */
+footer { margin-top: 3rem; }
+.bloco2 { margin-bottom: 3rem; }
+
+/* ---------- Entrada: um único momento orquestrado por página ---------- */
+@keyframes entrar {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: none; }
+}
+.board #minhaimagem,
+.board .dados,
+.section1 > .h1,
+.inicioprojetos,
+.cabeçalhoarquivos,
+.bio-intro {
+  animation: entrar 0.8s var(--ease) both;
+}
+.board .dados { animation-delay: 0.12s; }
+.section1 > .h1 { animation-delay: 0.24s; }
+
+/* ---------- Aparecer ao rolar (classes aplicadas por animacoes.js) ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1100px) {
+  main { width: 80%; padding: 4rem 2rem; }
+}
+
+/* ---------- Celular ---------- */
+@media (max-width: 768px) {
+  header { flex-wrap: wrap; gap: 0.5rem 1.5rem; padding: 0.75rem 1rem; justify-content: center; }
+  .cabeçalho2 { margin-left: 0; }
+  header ul { gap: 1rem; padding: 0; margin: 0; flex-wrap: wrap; justify-content: center; }
+  header li { margin-right: 0; }
+
+  main { width: 100%; box-sizing: border-box; padding: 2rem 1.25rem; gap: 2rem; }
+
+  .board, .bloco1, .bloco2, .bloco,
+  .galeriaprojetos, .divprojeto2, .divprojeto3 { flex-direction: column; }
+  .bloco:nth-child(even) { flex-direction: column; }
+  .board { align-items: flex-start; gap: 1rem; }
+  .dados { width: 100%; }
+
+  /* !important só aqui: os CSS originais usam #id com largura/altura fixas */
+  #minhaimagem { width: 120px !important; height: 120px !important; margin-right: 0; }
+  .bloco1 img, .bloco2 img, .bloco img, .projeto img,
+  .galeriaprojetos img, .v, .h {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100%;
+  }
+  .bloquinho1, .bloquinho2, .callout { width: 100%; }
+  .bloco2 { flex-direction: column-reverse; }
+  .divprojeto3 p { width: 100%; margin: 0 0 1rem; }
+  .video { width: 100%; height: auto; }
+  .galeriaprojetos { gap: 1rem; }
+  .section1 .h1 h1, .section1 h1 { font-size: 28px; line-height: 1.3; }
+}
+
+/* ---------- Movimento reduzido ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}

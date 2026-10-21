@@ -8,7 +8,7 @@ body {
   padding: 0;
   width:100%; 
   font-family: "Sahitya", serif;
-  background-color: rgb(237, 226, 229);
+  background-color: var(--fundo);
  
 }
 
@@ -39,7 +39,7 @@ header{
   
   ul li a {
     text-decoration: none;
-    color: #474444;
+    color: var(--texto);
     font-size: 12px;
   }
 
@@ -83,7 +83,7 @@ main{
 .inicioprojetos{
   height: 100%;
   max-width: 100%;
-  color: rgb(151, 46, 116);
+  color: var(--cor-destaque);
   
 }
 
@@ -167,7 +167,7 @@ main{
 footer {
   text-align: center;
   padding: 20px;
-  background: rgb(151, 46, 116);
+  background: var(--cor-destaque);
   color: white;
   margin-top: 20px;
 }

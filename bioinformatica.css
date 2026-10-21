@@ -1,0 +1,63 @@
+/* bioinformatica.css - estilos só da página de Bioinformática e do modelo de projeto.
+   Usa as variáveis definidas em melhorias.css. */
+
+.bio-intro, .bio-secao, .bio-projeto { width: 100%; }
+
+.bio-intro h1 {
+  margin: 0 0 1rem;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--cor-destaque);
+}
+
+.bio-secao h2 {
+  margin: 0 0 1rem;
+  font-size: 24px;
+  letter-spacing: -0.02em;
+  color: var(--cor-destaque);
+}
+
+.bio-card {
+  background: rgba(248, 249, 250, 1);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 20px;
+  transition: border-color 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.bio-card:hover {
+  border-color: var(--cor-destaque-suave);
+  box-shadow: 0 14px 30px -18px var(--cor-destaque-suave);
+}
+.bio-card h3 { margin: 0 0 0.25rem; font-size: 20px; color: var(--cor-destaque); }
+.bio-card p { margin: 0.5rem 0 0; }
+
+/* Estado do projeto: texto normal, sem caixa alta */
+.bio-status { font-size: 12px; color: rgb(126, 99, 117); }
+
+.bio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Etiquetas de ferramentas (reaproveite em cada projeto) */
+.bio-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0; margin: 1rem 0 0; }
+.bio-tags li {
+  margin: 0;
+  padding: 2px 10px;
+  font-size: 12px;
+  color: var(--cor-destaque);
+  border: 1px solid var(--cor-destaque-suave);
+  border-radius: 999px;
+  transition: background-color 0.25s var(--ease), color 0.25s var(--ease);
+}
+.bio-tags li:hover { background-color: var(--cor-destaque); color: whitesmoke; }
+
+.bio-link { display: inline-block; margin-top: 1rem; font-size: 14px; color: var(--cor-destaque); }
+
+/* Página de projeto individual */
+.bio-projeto h1 { margin: 0; font-size: 32px; color: var(--cor-destaque); }
+.bio-projeto h2 { margin: 2rem 0 0.5rem; font-size: 20px; color: var(--cor-destaque); }
+.bio-projeto img.figura { width: 100%; max-width: 100%; height: auto; margin-top: 1rem; }
+.bio-voltar { font-size: 14px; color: var(--cor-destaque); }
